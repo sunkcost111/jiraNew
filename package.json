@@ -10,6 +10,7 @@
     "@types/node": "^16.18.98",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "jira-dev-tool": "1.5.1",
     "qs": "^6.12.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -23,7 +24,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prepare": "husky",
-    "json-server": "json-server __json_server_mock__/db.json --watch --port 3001"
+    "json-server": "json-server __json_server_mock__/db.json --watch --port 3001 --middlewares __json_server_mock__/middleware.js"
   },
   "eslintConfig": {
     "extends": [
@@ -48,7 +49,7 @@
     "@commitlint/cli": "^19.3.0",
     "eslint-config-prettier": "^9.1.0",
     "husky": "^9.0.11",
-    "json-server": "^1.0.0-beta.1",
+    "json-server": "0.16.2",
     "lint-staged": "^15.2.5",
     "prettier": "3.3.1"
   },

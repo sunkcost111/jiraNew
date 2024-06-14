@@ -18,7 +18,7 @@ export const useMount = (callback: () => void) => {
     callback();
   }, []);
 };
-
+//泛型
 export const useDebounce = <V>(value: V, delay?: number) => {
   const [debouncedValue, setDebouncedValue] = useState(value);
   useEffect(() => {
@@ -39,3 +39,13 @@ export const useDebounce = <V>(value: V, delay?: number) => {
 //     timeout=setTimeout(() => func(...param), delay)
 //   }
 // }
+
+export const useArray = <A>(initialArray: A[]) => {
+  const [array, setArray] = useState(initialArray);
+  return {
+    value: array,
+    setValue: setArray,
+    add: (item: A) => setArray([...array, item]),
+    remove: (item: A) => setArray(array.filter((p) => p !== item)),
+  };
+};
